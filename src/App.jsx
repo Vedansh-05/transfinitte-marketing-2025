@@ -36,7 +36,7 @@ function App() {
             <circle cx="12" cy="12" r="10" />
           </svg>
           <span className="font-extrabold text-3xl text-gray-800">
-            Transfinitte
+            Transfinitte - 01
           </span>
         </div>
         {/* Middle: Navigation Options */}
