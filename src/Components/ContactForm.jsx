@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -45,7 +45,7 @@ const ContactForm = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="flex-1 rounded-xl bg-[#e5e5e5] px-6 py-4 text-lg text-gray-700 placeholder-gray-600 focus:outline-none"
+                        className="flex-1 rounded-xl bg-[#e5e5e5] p-6 text-lg text-gray-700 placeholder-gray-600 focus:outline-none"
                     />
                 </div>
 
@@ -56,13 +56,13 @@ const ContactForm = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full rounded-xl bg-[#e5e5e5] px-6 py-6 text-lg text-gray-700 placeholder-gray-600 focus:outline-none h-40 resize-none"
+                    className="w-full rounded-xl bg-[#e5e5e5] p-6 text-lg text-gray-700 placeholder-gray-600 focus:outline-none h-40 resize-none"
                 ></textarea>
 
                 {/* Submit Button */}
                 <button
                     type="submit"
-                    className="w-full bg-[#ff3e1d] text-white text-3xl font-semibold rounded-xl py-6 hover:bg-black transition duration-300"
+                    className="w-full bg-[#ff3e1d] text-white text-3xl font-semibold rounded-xl p-6 hover:bg-black transition duration-300"
                 >
                     Let’s Discuss
                 </button>
