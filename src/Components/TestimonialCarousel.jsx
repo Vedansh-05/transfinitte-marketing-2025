@@ -10,7 +10,7 @@ const testimonials = [
     role: "Founder & Director, Vestifex",
   },
   {
-    image: "https://images.unsplash.com/photo-1614282288264-c12b44d9581c",
+    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e",
     quote: "This approach is truly revolutionary.",
     description:
       "It’s rare to find a model that scales so well across diverse learning environments.",
@@ -18,7 +18,7 @@ const testimonials = [
     role: "EdTech Consultant",
   },
   {
-    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e",
     quote: "A brilliant initiative with tangible impact.",
     description:
       "The execution and relevance of this model exceeded expectations in both corporate and educational domains.",
@@ -51,19 +51,20 @@ const TestimonialCarousel = () => {
         <div className="mb-6 flex justify-between items-center w-full max-w-xs self-center gap-4">
           <button
             onClick={prev}
-            className="bg-orange-500 hover:bg-black transition duration-300 text-white w-10 h-10 flex items-center justify-center rounded-full text-xl"
+            className="bg-orange-500 hover:bg-black transition duration-300 text-white w-10 h-10 flex items-center justify-center rounded-full text-xl leading-none"
           >
-            &#8592;
+            <span className="relative -top-[1px]">&#8592;</span>
           </button>
-          <span className="text-gray-700 text-xl sm:text-2xl font-bold">
+          <span className="text-gray-700 text-xl sm:text-2xl font-bold" >
             {String(current + 1).padStart(2, "0")}/{String(total).padStart(2, "0")}
           </span>
           <button
             onClick={next}
-            className="bg-orange-500 hover:bg-black transition text-white w-10 h-10 flex items-center justify-center rounded-full text-xl"
+            className="bg-orange-500 hover:bg-black transition duration-300 text-white w-10 h-10 flex items-center justify-center rounded-full text-xl leading-none"
           >
-            &#8594;
+            <span className="relative -top-[1px]">&#8594;</span>
           </button>
+
         </div>
 
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600 my-4 leading-snug">

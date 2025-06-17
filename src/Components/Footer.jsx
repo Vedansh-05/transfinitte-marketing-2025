@@ -12,7 +12,7 @@ const Footer = () => {
 
     return (
         <footer className="bg-black text-white px-6 md:px-16 pt-12 pb-8 text-sm md:text-base">
-            <div className="overflow-hidden w-full bg-black py-4 border-2 mb-2">
+            <div className="overflow-hidden w-full bg-black py-4 mb-2">
                 <motion.div
                     className="flex text-8xl font-bold whitespace-nowrap text-white"
                     initial={{ x: 0 }}
