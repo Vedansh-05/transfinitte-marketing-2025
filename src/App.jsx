@@ -5,6 +5,8 @@ import LogoCarousel from './Components/LogoCarousel';
 import ContactForm from './Components/ContactForm';
 import Footer from "./Components/Footer";
 
+import AnimatedSection from './AnimatedSection';
+
 function App() {
   return (
     <div className="min-h-screen min-w-full bg-gray-100">
@@ -19,18 +21,18 @@ function App() {
         <div className="w-11/12 flex flex-col md:flex-row items-stretch border-b-2 border-gray-400 pb-10 gap-6">
           {/* Left */}
           <div className="flex flex-col justify-center flex-1">
-            <span className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
+            <AnimatedSection staggerLetters className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
               Our Mission
-            </span>
-            <span className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
+            </AnimatedSection>
+            <AnimatedSection staggerLetters className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
               Transforming Education for Tomorrow
-            </span>
+            </AnimatedSection>
           </div>
           {/* Right */}
           <div className="hidden md:flex items-center justify-end md:justify-end flex-1">
-            <span className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
+            <AnimatedSection staggerLetters className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
               (01)
-            </span>
+            </AnimatedSection>
           </div>
         </div>
 
@@ -58,7 +60,7 @@ function App() {
         </div>
 
         {/* Image/Highlight Block */}
-        <div
+        <AnimatedSection scaleDown
           className="w-11/12 mt-16 mx-auto overflow-hidden relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px] flex flex-col justify-between bg-cover bg-center bg-gray-500 border-8"
           style={{ backgroundImage: "" }}
         >
@@ -67,15 +69,9 @@ function App() {
 
           {/* Main Text */}
           <div className="relative z-10 px-6 sm:px-10 md:px-12 pt-10 pb-6 w-full">
-            <h2 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-snug">
-              The concept of learning
-              <br />
-              ecosystems — a visionary
-              <br />
-              approach that brings flexibility
-              <br />
-              and interconnectedness
-            </h2>
+            <AnimatedSection staggerLetters className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-snug w-[75%]">
+              The concept of learning ecosystems — a visionary approach that brings flexibility and interconnectedness
+            </AnimatedSection>
           </div>
 
           {/* Bottom Row */}
@@ -95,7 +91,7 @@ function App() {
               </span>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* New Section - 02 */}
@@ -104,18 +100,18 @@ function App() {
         <div className="w-11/12 flex flex-col md:flex-row items-stretch border-b-2 border-gray-400 pb-10 gap-6">
           {/* Left */}
           <div className="flex flex-col justify-center flex-1">
-            <span className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
+            <AnimatedSection staggerLetters className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
               Our Mission
-            </span>
-            <span className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
+            </AnimatedSection>
+            <AnimatedSection staggerLetters className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
               Transforming Education for Tomorrow
-            </span>
+            </AnimatedSection>
           </div>
           {/* Right */}
           <div className="hidden md:flex items-center justify-end md:justify-end flex-1">
-            <span className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
+            <AnimatedSection staggerLetters className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
               (02)
-            </span>
+            </AnimatedSection>
           </div>
         </div>
 
@@ -143,7 +139,7 @@ function App() {
         </div>
 
         {/* Image/Highlight Block */}
-        <div
+        <AnimatedSection scaleDown
           className="w-11/12 mt-16 mx-auto overflow-hidden relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px] flex flex-col justify-between bg-cover bg-center bg-gray-500 border-8"
           style={{ backgroundImage: "" }}
         >
@@ -152,15 +148,9 @@ function App() {
 
           {/* Main Text */}
           <div className="relative z-10 px-6 sm:px-10 md:px-12 pt-10 pb-6 w-full">
-            <h2 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-snug">
-              The concept of learning
-              <br />
-              ecosystems — a visionary
-              <br />
-              approach that brings flexibility
-              <br />
-              and interconnectedness
-            </h2>
+            <AnimatedSection staggerLetters className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-snug w-[75%]">
+              The concept of learning ecosystems — a visionary approach that brings flexibility and interconnectedness
+            </AnimatedSection>
           </div>
 
           {/* Bottom Row */}
@@ -180,7 +170,7 @@ function App() {
               </span>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       <section className="w-full flex flex-col gap-10 justify-center items-center py-8">
@@ -227,18 +217,18 @@ function App() {
         <div className="w-11/12 flex flex-col md:flex-row items-stretch border-b-2 border-gray-400 pb-10 gap-6">
           {/* Left */}
           <div className="flex flex-col justify-center flex-1">
-            <span className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
+            <AnimatedSection staggerLetters className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
               Our Mission
-            </span>
-            <span className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
+            </AnimatedSection>
+            <AnimatedSection staggerLetters className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
               Transforming Education for Tomorrow
-            </span>
+            </AnimatedSection>
           </div>
           {/* Right */}
           <div className="hidden md:flex items-center justify-end md:justify-end flex-1">
-            <span className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
+            <AnimatedSection staggerLetters className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
               (03)
-            </span>
+            </AnimatedSection>
           </div>
         </div>
 
@@ -266,7 +256,7 @@ function App() {
         </div>
 
         {/* Image/Highlight Block */}
-        <div
+        <AnimatedSection scaleDown
           className="w-11/12 mt-16 mx-auto overflow-hidden relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px] flex flex-col justify-between bg-cover bg-center bg-gray-500 border-8"
           style={{ backgroundImage: "" }}
         >
@@ -275,15 +265,9 @@ function App() {
 
           {/* Main Text */}
           <div className="relative z-10 px-6 sm:px-10 md:px-12 pt-10 pb-6 w-full">
-            <h2 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-snug">
-              The concept of learning
-              <br />
-              ecosystems — a visionary
-              <br />
-              approach that brings flexibility
-              <br />
-              and interconnectedness
-            </h2>
+            <AnimatedSection staggerLetters className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-snug w-[75%]">
+              The concept of learning ecosystems — a visionary approach that brings flexibility and interconnectedness
+            </AnimatedSection>
           </div>
 
           {/* Bottom Row */}
@@ -303,11 +287,8 @@ function App() {
               </span>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
-
-
-      {/* New Part - After Timline */}
 
       {/* New Section - 04 */}
       <section className="w-full flex flex-col gap-10 justify-center items-center py-20">
@@ -315,12 +296,12 @@ function App() {
         <div className="w-11/12 flex flex-col md:flex-row items-stretch border-b-2 border-gray-400 pb-10 gap-6">
           {/* Left */}
           <div className="flex flex-col justify-center flex-1">
-            <span className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
+            <AnimatedSection staggerLetters className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
               Our Mission
-            </span>
-            <span className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
+            </AnimatedSection>
+            <AnimatedSection staggerLetters className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
               Transforming Education for Tomorrow
-            </span>
+            </AnimatedSection>
           </div>
           {/* Center Inner Div */}
           <div className="flex flex-col justify-center flex-1">
@@ -330,9 +311,9 @@ function App() {
           </div>
           {/* Right */}
           <div className="hidden lg:flex items-center justify-end md:justify-end flex-1">
-            <span className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
+            <AnimatedSection staggerLetters className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
               (04)
-            </span>
+            </AnimatedSection>
           </div>
         </div>
 
@@ -360,7 +341,7 @@ function App() {
         </div>
 
         {/* Image/Highlight Block */}
-        <div
+        <AnimatedSection scaleDown
           className="w-11/12 mt-16 mx-auto overflow-hidden relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px] flex flex-col justify-between bg-cover bg-center bg-gray-500 border-8"
           style={{ backgroundImage: "" }}
         >
@@ -369,15 +350,9 @@ function App() {
 
           {/* Main Text */}
           <div className="relative z-10 px-6 sm:px-10 md:px-12 pt-10 pb-6 w-full">
-            <h2 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-snug">
-              The concept of learning
-              <br />
-              ecosystems — a visionary
-              <br />
-              approach that brings flexibility
-              <br />
-              and interconnectedness
-            </h2>
+            <AnimatedSection staggerLetters className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-snug w-[75%]">
+              The concept of learning ecosystems — a visionary approach that brings flexibility and interconnectedness
+            </AnimatedSection>
           </div>
 
           {/* Bottom Row */}
@@ -397,7 +372,7 @@ function App() {
               </span>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* New Section - 05 */}
@@ -405,18 +380,18 @@ function App() {
         <div className="w-11/12 flex flex-col md:flex-row items-stretch border-b-2 border-gray-400 pb-10 gap-6">
           {/* Left */}
           <div className="flex flex-col justify-center flex-1">
-            <span className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
+            <AnimatedSection staggerLetters className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
               Our Mission
-            </span>
-            <span className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
+            </AnimatedSection>
+            <AnimatedSection staggerLetters className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
               Transforming Education for Tomorrow
-            </span>
+            </AnimatedSection>
           </div>
           {/* Right */}
           <div className="hidden md:flex items-center justify-end md:justify-end flex-1">
-            <span className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
+            <AnimatedSection staggerLetters className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
               (05)
-            </span>
+            </AnimatedSection>
           </div>
         </div>
         <TestimonialCarousel />
@@ -427,18 +402,18 @@ function App() {
         <div className="w-11/12 flex flex-col md:flex-row items-stretch border-b-2 border-gray-400 pb-10 gap-6">
           {/* Left */}
           <div className="flex flex-col justify-center flex-1">
-            <span className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
+            <AnimatedSection staggerLetters className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
               Our Mission
-            </span>
-            <span className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
+            </AnimatedSection>
+            <AnimatedSection staggerLetters className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
               Transforming Education for Tomorrow
-            </span>
+            </AnimatedSection>
           </div>
           {/* Right */}
           <div className="hidden md:flex items-center justify-end md:justify-end flex-1">
-            <span className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
+            <AnimatedSection staggerLetters className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
               (06)
-            </span>
+            </AnimatedSection>
           </div>
         </div>
         <LogoCarousel />
@@ -449,18 +424,18 @@ function App() {
         <div className="w-11/12 flex flex-col md:flex-row items-stretch border-b-2 border-gray-400 pb-10 gap-6">
           {/* Left */}
           <div className="flex flex-col justify-center flex-1">
-            <span className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
+            <AnimatedSection staggerLetters className="text-blue-600 text-base md:text-lg font-semibold mb-2 text-left">
               Our Mission
-            </span>
-            <span className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
+            </AnimatedSection>
+            <AnimatedSection staggerLetters className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-gray-900 text-left">
               Transforming Education for Tomorrow
-            </span>
+            </AnimatedSection>
           </div>
           {/* Right */}
           <div className="hidden md:flex items-center justify-end md:justify-end flex-1">
-            <span className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
+            <AnimatedSection staggerLetters className="text-gray-300 font-light text-[18vw] sm:text-[12vw] md:text-[10vw] leading-none select-none italic">
               (07)
-            </span>
+            </AnimatedSection>
           </div>
         </div>
       </section>

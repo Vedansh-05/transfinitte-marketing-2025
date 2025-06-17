@@ -1,3 +1,5 @@
+import AnimatedSection from '../AnimatedSection';
+
 const HeroComp = () => {
     return (
         <section id="hero-section" className="flex items-center justify-start px-6 md:px-12 lg:px-16 min-h-[calc(100vh-100px)] pt-[120px]">
@@ -10,12 +12,8 @@ const HeroComp = () => {
                 </div>
 
                 {/* Main Heading */}
-                <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-gray-900 leading-tight mb-8">
-                    Driving Innovation in
-                    <br />
-                    Education for Sustainable
-                    <br />
-                    Learning Ecosystems
+                <h1 className="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-gray-900 leading-tight mb-8 w-[60%]">
+                    <AnimatedSection staggerLetters>Driving Innovation in Education for Sustainable Learning Ecosystems </AnimatedSection>
                 </h1>
 
                 {/* Paragraph + Button */}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
     const [email, setEmail] = useState("");
@@ -11,6 +12,22 @@ const Footer = () => {
 
     return (
         <footer className="bg-black text-white px-6 md:px-16 pt-12 pb-8 text-sm md:text-base">
+            <div className="overflow-hidden w-full bg-black py-4 border-2 mb-2">
+                <motion.div
+                    className="flex text-8xl font-bold whitespace-nowrap text-white"
+                    initial={{ x: 0 }}
+                    animate={{ x: "-50%" }}
+                    transition={{
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        duration: 20,
+                        ease: "linear",
+                    }}
+                >
+                    <span className="mr-24">Let's Change the World Together</span>
+                    <span className="mr-24">Let's Change the World Together</span>
+                </motion.div>
+            </div>
             <div className="flex flex-col md:flex-row justify-between border-t border-b border-gray-700 py-10">
                 {/* Left Section */}
                 <div className="mb-10 md:mb-0">
