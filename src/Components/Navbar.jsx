@@ -9,19 +9,32 @@ const Navbar = () => {
             const heroSection = document.getElementById("hero-section");
             if (!heroSection) return;
             const heroBottom = heroSection.getBoundingClientRect().bottom;
-            if (heroBottom <= 0) {
-                setNavBg("bg-white shadow");
-            } else {
-                setNavBg("bg-transparent");
-            }
+            setNavBg(heroBottom <= 0 ? "bg-white shadow" : "bg-transparent");
         };
+
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            window.scrollTo({
+                top: section.offsetTop - 80, // offset for navbar height
+                behavior: "smooth",
+            });
+        }
+    };
+
+    const navItems = [
+        { label: "Home", id: "hero-section" },
+        { label: "About", id: "about-section" },
+        { label: "Contact", id: "contact-section" },
+    ];
+
     return (
         <nav
-            className={`fixed z-50 w-full max-w-screen mx-auto my-4 ${navBg} shadow-none flex items-center justify-between px-6 md:px-8 py-4 md:py-6 min-h-[80px] rounded-full transition-colors duration-300`}
+            className={`fixed z-50 w-full max-w-screen mx-auto my-4 ${navBg} shadow-none flex items-center justify-between px-6 py-4 min-h-[80px] rounded-full transition-colors duration-300`}
         >
             {/* Left: Logo and Name */}
             <div className="flex items-center space-x-3">
@@ -37,36 +50,27 @@ const Navbar = () => {
                 </span>
             </div>
 
-            {/* Middle: Nav Links (hidden on small screens) */}
+            {/* Middle: Nav Links */}
             <div className="hidden md:flex space-x-6 lg:space-x-10">
-                <a
-                    href="#hero-section"
-                    className="text-gray-700 hover:text-blue-600 font-semibold text-base md:text-lg"
-                >
-                    Home
-                </a>
-                <a
-                    href="#about-section"
-                    className="text-gray-700 hover:text-blue-600 font-semibold text-base md:text-lg"
-                >
-                    About
-                </a>
-                <a
-                    href="#contact-section"
-                    className="text-gray-700 hover:text-blue-600 font-semibold text-base md:text-lg"
-                >
-                    Contact
-                </a>
+                {navItems.map(({ label, id }) => (
+                    <button
+                        key={id}
+                        onClick={() => scrollToSection(id)}
+                        className="text-gray-700 hover:text-blue-600 font-semibold text-base md:text-lg"
+                    >
+                        {label}
+                    </button>
+                ))}
             </div>
 
-            {/* Right: Button (hidden on small screens) */}
+            {/* Right: CTA Button */}
             <div className="hidden md:block">
                 <button className="bg-blue-600 text-white px-6 md:px-7 py-2 md:py-3 rounded-full hover:bg-blue-700 font-bold text-base md:text-lg transition">
                     Get Started
                 </button>
             </div>
 
-            {/* Hamburger Icon (shown on small screens) */}
+            {/* Hamburger Menu */}
             <div className="md:hidden">
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
@@ -100,25 +104,18 @@ const Navbar = () => {
             {/* Mobile Dropdown */}
             {menuOpen && (
                 <div className="absolute top-full mt-3 left-0 right-0 bg-white rounded-2xl shadow-md px-6 py-4 flex flex-col items-start space-y-4 md:hidden">
-
-                    <a
-                        href="#hero-section"
-                        className="text-gray-700 hover:text-blue-600 font-medium text-base"
-                    >
-                        Home
-                    </a>
-                    <a
-                        href="#about-section"
-                        className="text-gray-700 hover:text-blue-600 font-medium text-base"
-                    >
-                        About
-                    </a>
-                    <a
-                        href="#contact-section"
-                        className="text-gray-700 hover:text-blue-600 font-medium text-base"
-                    >
-                        Contact
-                    </a>
+                    {navItems.map(({ label, id }) => (
+                        <button
+                            key={id}
+                            onClick={() => {
+                                scrollToSection(id);
+                                setMenuOpen(false);
+                            }}
+                            className="text-gray-700 hover:text-blue-600 font-medium text-base text-left w-full"
+                        >
+                            {label}
+                        </button>
+                    ))}
                     <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 font-bold text-base transition w-full text-center">
                         Get Started
                     </button>
@@ -126,6 +123,6 @@ const Navbar = () => {
             )}
         </nav>
     );
-}
+};
 
-export default Navbar
+export default Navbar;

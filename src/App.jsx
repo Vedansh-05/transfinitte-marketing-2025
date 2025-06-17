@@ -14,7 +14,7 @@ function App() {
       <HeroComp />
 
       {/* New Section - 01 */}
-      <section className="w-full flex flex-col gap-10 justify-center items-center py-20">
+      <section id="about-section" className="w-full flex flex-col gap-10 justify-center items-center py-20">
         {/* Top Row */}
         <div className="w-11/12 flex flex-col md:flex-row items-stretch border-b-2 border-gray-400 pb-10 gap-6">
           {/* Left */}
@@ -99,7 +99,7 @@ function App() {
       </section>
 
       {/* New Section - 02 */}
-      <section id="about-section" className="w-full flex flex-col gap-10 justify-center items-center py-20">
+      <section className="w-full flex flex-col gap-10 justify-center items-center py-20">
         {/* Top Row */}
         <div className="w-11/12 flex flex-col md:flex-row items-stretch border-b-2 border-gray-400 pb-10 gap-6">
           {/* Left */}

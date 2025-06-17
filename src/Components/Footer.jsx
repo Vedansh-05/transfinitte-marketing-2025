@@ -41,6 +41,9 @@ const Footer = () => {
                     </div>
                 </div>
 
+                {/* Vertical Line */}
+                <div className="hidden md:block w-px bg-gray-700 mx-6" />
+
                 {/* Right Section */}
                 <div className="md:w-1/2">
                     {/* Socials */}
