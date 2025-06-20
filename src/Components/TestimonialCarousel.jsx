@@ -2,28 +2,28 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e",
-    quote: "I was very impressed and had plenty of ideas and insights.",
+    image: "./pics/section-05.1.png",
+    quote: "The workshocks have been an easy way to talk about technology and think about how to use it in a concrete way in my teaching.",
     description:
       "I believe you should share your discoveries everywhere because the model can be effective in both formal and non-formal education.",
     name: "Jelena Lohmatova",
     role: "Founder & Director, Vestifex",
   },
   {
-    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e",
-    quote: "This approach is truly revolutionary.",
+    image: "./pics/section-05.2.png",
+    quote: "WTF are you doing?",
     description:
-      "It’s rare to find a model that scales so well across diverse learning environments.",
-    name: "Alex Johnson",
-    role: "EdTech Consultant",
+      "I can already after only one session clearly see the change that is happening in our organization",
+    name: "Mari-Liis Sults",
+    role: "School leader in Estonia.",
   },
   {
-    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e",
-    quote: "A brilliant initiative with tangible impact.",
+    image: "./pics/section-05.3.png",
+    quote: "I was very impressed and had plenty of ideas and insights.",
     description:
-      "The execution and relevance of this model exceeded expectations in both corporate and educational domains.",
-    name: "Samantha Ray",
-    role: "Program Director, LearnSphere",
+      "We appreciate all the networking opportunities and our coach Juhani’s warm and supporting approach.”",
+    name: "Aki Järvinen",
+    role: "Teacher in Turku University",
   },
 ];
 
@@ -35,18 +35,18 @@ const TestimonialCarousel = () => {
   const { image, quote, description, name, role } = testimonials[current];
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-8 items-start">
+    <div className="w-full mx-auto px-4 py-10 flex flex-col md:flex-row gap-8">
       {/* Left - Image */}
-      <div className="w-full md:w-1/2 p-4">
+      <div className="w-full md:w-1/2 p-4 flex justify-center">
         <img
           src={image}
           alt={name}
-          className="rounded-lg w-full h-auto object-cover shadow-md"
+          className="rounded-lg border-4 border-black w-lg object-cover"
         />
       </div>
 
       {/* Right - Text */}
-      <div className="w-full md:w-1/2 p-4 flex flex-col items-center">
+      <div className="w-full md:w-1/2 p-4 flex flex-col items-center justify-start">
         {/* Navigation */}
         <div className="mb-6 flex justify-between items-center w-full max-w-xs self-center gap-4">
           <button
