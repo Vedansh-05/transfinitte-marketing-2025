@@ -37,6 +37,11 @@ const LogoCarousel = () => {
                     </div>
                 ))}
             </motion.div>
+            <div className="relative z-10 p-8 flex justify-center">
+                <button className="bg-[rgb(244,74,39)] rounded-3xl px-20 py-4 text-lg md:text-xl lg:text-2xl text-white shadow-lg hover:bg-black transition">
+                    Become a Partner
+                </button>
+            </div>
         </div>
     );
 };

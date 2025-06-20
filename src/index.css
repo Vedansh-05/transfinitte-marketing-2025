@@ -9,4 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Roboto';
+  overflow-x: hidden;
+  letter-spacing: -0.75px;
 }

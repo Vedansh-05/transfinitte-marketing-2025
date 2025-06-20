@@ -24,8 +24,8 @@ const Footer = () => {
                         ease: "linear",
                     }}
                 >
-                    <span className="mr-24">Let's Change the World Together</span>
-                    <span className="mr-24">Let's Change the World Together</span>
+                    <span className="mr-24">Let's <span className="text-[rgb(244,74,39)]">change</span> the <span className="text-[rgb(244,74,39)]">world</span> together!</span>
+                    <span className="mr-24">Let's <span className="text-[rgb(244,74,39)]">change</span> the <span className="text-[rgb(244,74,39)]">world</span> Together!</span>
                 </motion.div>
             </div>
             <div className="flex flex-col md:flex-row justify-between border-t border-b border-gray-700 py-10">
@@ -33,7 +33,7 @@ const Footer = () => {
                 <div className="mb-10 md:mb-0">
                     <div className="flex items-center gap-2 mb-6">
                         <div className="w-6 h-6 bg-[#ff3e1d] rounded-full" />
-                        <span className="text-2xl md:text-3xl font-bold">educraftor</span>
+                        <span className="text-2xl md:text-3xl font-bold">TransfiNITTe</span>
                     </div>
 
                     <div className="text-gray-400 space-y-4 text-xs md:text-sm lg:text-base">
@@ -97,9 +97,9 @@ const Footer = () => {
 
             {/* Footer Bottom */}
             <div className="flex flex-col md:flex-row justify-between items-center pt-6 text-xs md:text-sm text-gray-500 gap-4">
-                <p>© 2024 - Educraftor. All rights reserved</p>
+                <p>© 2025 - TransfiNITTe. All rights reserved</p>
                 <a href="#" className="hover:text-white">
-                    Privacy policy
+                    Privacy Policy
                 </a>
             </div>
         </footer>

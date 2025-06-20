@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 
 const Navbar = () => {
     const [navBg, setNavBg] = useState("bg-transparent");
+    const [navTxt, setNavTxt] = useState("text-white");
+    const [btnTxt, setBtnTxt] = useState("text-black");
+    const [btnBg, setBtnBg] = useState("bg-white");
     const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
@@ -10,6 +13,9 @@ const Navbar = () => {
             if (!heroSection) return;
             const heroBottom = heroSection.getBoundingClientRect().bottom;
             setNavBg(heroBottom <= 0 ? "bg-white shadow" : "bg-transparent");
+            setBtnBg(heroBottom <= 0 ? "bg-black" : "bg-white");
+            setNavTxt(heroBottom <= 0 ? "text-black" : "text-white");
+            setBtnTxt(heroBottom <= 0 ? "text-white" : "text-black")
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -34,19 +40,19 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed z-50 w-full max-w-screen mx-auto my-4 ${navBg} shadow-none flex items-center justify-between px-6 py-4 min-h-[80px] rounded-full transition-colors duration-300`}
+            className={`fixed z-50 w-full max-w-screen mx-auto my-4 ${navBg} ${navTxt} shadow-none flex items-center justify-between px-6 py-4 min-h-[80px] rounded-full transition-colors duration-300`}
         >
             {/* Left: Logo and Name */}
             <div className="flex items-center space-x-3">
                 <svg
-                    className="h-8 w-8 md:h-10 md:w-10 text-blue-600"
+                    className="h-8 w-8 md:h-10 md:w-10 text-[rgb(244,74,39)]"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                 >
                     <circle cx="12" cy="12" r="10" />
                 </svg>
-                <span className="font-extrabold text-xl md:text-3xl text-gray-800">
-                    Transfinitte
+                <span className="font-extrabold text-xl md:text-3xl">
+                    TransfiNITTe
                 </span>
             </div>
 
@@ -56,7 +62,7 @@ const Navbar = () => {
                     <button
                         key={id}
                         onClick={() => scrollToSection(id)}
-                        className="text-gray-700 hover:text-blue-600 font-semibold text-base md:text-lg"
+                        className="font-semibold text-base md:text-lg"
                     >
                         {label}
                     </button>
@@ -65,8 +71,8 @@ const Navbar = () => {
 
             {/* Right: CTA Button */}
             <div className="hidden md:block">
-                <button className="bg-blue-600 text-white px-6 md:px-7 py-2 md:py-3 rounded-full hover:bg-blue-700 font-bold text-base md:text-lg transition">
-                    Get Started
+                <button onClick={() => scrollToSection("contact-section")} className={`${btnTxt} ${btnBg} px-8 py-4 rounded-full hover:bg-[rgb(244,74,39)] hover:${navTxt} text-base md:text-md transition duration-300`}>
+                    Get in Touch
                 </button>
             </div>
 
@@ -74,7 +80,7 @@ const Navbar = () => {
             <div className="md:hidden">
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
-                    className="text-gray-700 focus:outline-none"
+                    className="focus:outline-none"
                 >
                     <svg
                         className="w-7 h-7"
@@ -111,13 +117,13 @@ const Navbar = () => {
                                 scrollToSection(id);
                                 setMenuOpen(false);
                             }}
-                            className="text-gray-700 hover:text-blue-600 font-medium text-base text-left w-full"
+                            className={`text-black font-medium text-base text-left w-full`}
                         >
                             {label}
                         </button>
                     ))}
-                    <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 font-bold text-base transition w-full text-center">
-                        Get Started
+                    <button onClick={() => scrollToSection("contact-section")} className="bg-black text-white px-8 py-6 rounded-full hover:bg-[rgb(244,74,39)] text-base transition w-full text-center">
+                        Get in Touch
                     </button>
                 </div>
             )}
